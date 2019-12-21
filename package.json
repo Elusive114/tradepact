@@ -2,7 +2,7 @@
 "name": "Test",
 "description": "Test",
 "version": "0.0.0",
-"main": botcode.js, 
+"main": "botcode.js", 
  "scripts": { 
 "start": "node botcode.js"
 },
