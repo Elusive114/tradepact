@@ -1,0 +1,28 @@
+const Discord = require("discord.js");
+const client = new Discord.Client();
+
+ bot.on("message", function(message) { if (message.author.equals(bot.user)) return; if (message.content === "%apply") { apply = "TRUE"; a0 = message.author.lastMessageID
+ 
+message.author.sendMessage("
+Lets start creating your TradePact! Type cancel to cancel the process.
+"); 
+message.author.sendMessage("
+Application Started - Type '#Cancel' to cancel the application
+"); message.author.sendMessage("
+What item do you want to sell? (The next thing you send must be the item)
+"); } if ((message.guild === null) && (message.author.lastMessageID != a0) && (message.content != "%apply") && (apply === "TRUE")) { a1 = message.author.lastMessageID;
+
+ message.author.sendMessage("
+What price in credits do you want to sell it for?(The next message you send must be the price as a number)
+"); } if ((message.guild === null) && (message.author.lastMessageID != a1) && (message.author.lastMessageID != a0) && (apply === "TRUE")) { a2 = message.author.lastMessageID;
+
+message.author.sendMessage("
+What is your steam link?(The next message you send must your steamlink)
+"); } if ((message.guild === null) && (message.author.lastMessageID != a1) && (message.author.lastMessageID != a0) && (apply === "TRUE")) { a3 = message.author.lastMessageID;
+
+let channel = message.channels.get('222197033908436994')
+channel.send(`TradePact for ${a3} /n Item = ${a1} /n --------------------------- /n
+Price = ${a2}`)
+
+client.login(process.env.BOT_TOKEN)
+
